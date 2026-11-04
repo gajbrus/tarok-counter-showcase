@@ -26,19 +26,28 @@ started as a digital score sheet and grew into a full product:
 
 ## Screenshots and video
 
-> 📸 *Placeholders: replace the files in [`media/`](media/) and keep the names, or edit the links.*
+<p align="center"><b>Playing table</b><br><img src="https://github.com/user-attachments/assets/4549dbe8-4bc0-400d-92ea-3a2cf351e55d" alt="Playing table" width="100%"></p>
 
-| Score sheet | Playing table | Multiplayer lobby |
-| :---: | :---: | :---: |
-| ![Score sheet](media/score-sheet.png) | ![Playing table](media/playing-table.png) | ![Multiplayer lobby](media/lobby.png) |
-
-| Round results | Profile and achievements | Statistics |
-| :---: | :---: | :---: |
-| ![Round results](media/round-results.png) | ![Profile](media/profile.png) | ![Statistics](media/statistics.png) |
+<table>
+<tr>
+<td width="50%" align="center"><b>Score sheet</b><br><img src="https://github.com/user-attachments/assets/0d98309b-059a-42f5-8cba-1ffe84d1d14e" alt="Score sheet" width="100%"></td>
+<td width="50%" align="center"><b>Round results</b><br><img src="https://github.com/user-attachments/assets/240c1f0e-dbf8-4d32-b77f-7fd319c02fa9" alt="Round results" width="100%"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><b>Creating a match</b><br><img src="https://github.com/user-attachments/assets/74b31201-ccde-487c-a5c3-264ab27ace32" alt="Creating a match" width="100%"></td>
+<td width="50%" align="center"><b>Multiplayer lobby</b><br><img src="https://github.com/user-attachments/assets/2258ed7b-b03c-4428-8bbc-ec4140110ed9" alt="Multiplayer lobby" width="100%"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><b>Multiplayer lobby</b><br><img src="https://github.com/user-attachments/assets/a2d18614-db06-4a1e-aae7-46b620daf9b2" alt="Multiplayer lobby" width="100%"></td>
+<td width="50%" align="center"><b>Statistics</b><br><img src="https://github.com/user-attachments/assets/fb56bd46-3abd-4aa9-9e70-3ce103aaebd4" alt="Statistics" width="100%"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><b>Profile</b><br><img src="https://github.com/user-attachments/assets/9fc6bdcc-80bb-4ed9-aa7d-3618092e6b97" alt="Profile" width="100%"></td>
+<td width="50%" align="center"><b>Profile</b><br><img src="https://github.com/user-attachments/assets/42404af0-c892-47c7-be63-9e2db9c61aa2" alt="Profile" width="100%"></td>
+</tr>
+</table>
 
 **Demo video:** [▶ Watch on YouTube](https://youtu.be/VIDEO_ID) *(placeholder)*
-
-<!-- Or embed a GIF: ![Demo](media/demo.gif) -->
 
 ---
 
