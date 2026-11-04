@@ -47,8 +47,6 @@ started as a digital score sheet and grew into a full product:
 </tr>
 </table>
 
-**Demo video:** [▶ Watch on YouTube](https://youtu.be/VIDEO_ID) *(placeholder)*
-
 ---
 
 ## At a glance
@@ -205,9 +203,3 @@ Design decisions:
   code.
 
 ---
-
-## Contact
-
-**Gaj Brus**: [GitHub](https://github.com/gajbrus) · *LinkedIn: add link* · *Email: add address*
-
-Happy to give a code walkthrough or a live demo.
