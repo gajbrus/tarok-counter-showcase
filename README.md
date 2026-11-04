@@ -156,8 +156,8 @@ flowchart TD
 Design decisions:
 
 - **One rule engine everywhere.** The engine is pure Dart with no Flutter
-  imports. The score sheet, local AI games, the Edge Function and the bot
-  research harness all run the same code, so there is no second implementation
+  imports. The score sheet, local AI games and the Edge Function all run
+  the same code, so there is no second implementation
   that could drift.
 - **Clean backend boundary.** Screens, widgets, models and the engine import no
   backend SDK. Everything goes through `Repositories.*`. This made it possible
@@ -175,35 +175,6 @@ Design decisions:
 
 ---
 
-## AI research: the "bot lab"
-
-Making the bots stronger needed proper experiments, so I built an offline
-research harness around the production engine:
-
-- A **CLI tool** (compiled Dart executable, 8 worker processes) that plays
-  thousands of **paired deals**: the same cards with the candidate in each
-  seat, which cancels most of the card luck.
-- An **opponent zoo** of 14 play-style archetypes (aggressive, soloist,
-  klopper, gambler, rock…) and holdout tables, so a bot can't overfit to one
-  kind of opponent.
-- **CMA-ES parameter tuning** with strictly separate tuning and validation seed
-  ranges. Only changes with a clear confidence interval on the validation
-  seeds are shipped.
-- **Real-game replay:** 365 rounds of real games from an online Tarok site,
-  plus games played in the app, used to calibrate bidding and the belief
-  model.
-- Main measured result: expected-value bidding added **+3.4 to +4.0 points per
-  deal**, the largest single gain. Flat PIMC card play added +0.5 to +0.8.
-- Every experiment, rejected ideas included, is logged in a decision record
-  with its confidence interval.
-
-What I learned along the way: 400-deal runs are noise (about ±1 point per
-deal), so every decision needs 2,000+ paired deals. Search ties fall back to
-hand order unless they are broken on purpose. And a test that only asserts
-equal totals can pass without checking anything.
-
----
-
 ## Tech stack
 
 | Area | Technologies |
@@ -213,8 +184,8 @@ equal totals can pass without checking anything.
 | Hosting | Firebase Hosting (web) |
 | Security | Row Level Security, server-authoritative game state, Cloudflare Turnstile, rate limiting, enumeration-proof lookups |
 | Observability | Sentry (crash reporting), PostHog (product analytics over HTTP) |
-| AI | Heuristic policies, PIMC / determinization, expected-value decisions, Bayesian-style belief from actions, CMA-ES tuning |
-| Quality | ~800 unit and widget tests, SQL RLS tests, `flutter analyze`, a benchmark gate for AI changes |
+| AI | Heuristic policies, PIMC / determinization, expected-value decisions, Bayesian-style belief from actions |
+| Quality | ~800 unit and widget tests, SQL RLS tests, `flutter analyze` |
 
 ---
 
